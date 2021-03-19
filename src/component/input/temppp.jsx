@@ -13,7 +13,7 @@ const initialState = {
   passwordConfirmation: ""
 };
 
-const Signup = () => {
+Signup = () => {
   const [
     { username, email, password, passwordConfirmation },
     setState
