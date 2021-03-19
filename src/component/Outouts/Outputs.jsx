@@ -5,7 +5,7 @@ var reArraay = JSON.parse(localStorage.getItem('key'));
 class Outputs extends React.Component {
     constructor(props) {
         super(props);
-        console.log(this.props.match.params);
+        console.log(this.props.match.params.id);
     }
     deleteHandler(e ,delBtnId) {
         // e.preventDefault();
@@ -14,8 +14,6 @@ class Outputs extends React.Component {
         // localStorage.setItem('key', JSON.stringify(temp))
         alert("coming soonn");
     }
-
-
 
     render() {
         return (
@@ -33,9 +31,8 @@ class Outputs extends React.Component {
                     </thead>
                     <tbody>
                         {
-                         reArraay.map((element , index) =>{     
-
-                             if(element.id === this.props.match.params.id){
+                         reArraay.map((element , index) =>{                                
+                             if(element.id === parseInt( this.props.match.params.id)){                            
                                 return(<tr key ={index} >
                                     <td style={{padding:"10px" , color : "crimson"}}>{element.fname}</td>
                                     <td style={{padding:"10px" , color : "crimson"}}>{element.lname}</td>

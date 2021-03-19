@@ -13,6 +13,7 @@ import {
   Link,
   useParams
 } from "react-router-dom";
+
 import React, { useState } from 'react' 
 
 
@@ -38,14 +39,14 @@ function App() {
           </ul>
 
           <Switch>
-            <Route path="/" component={Accepts} exact />
-            <Route path="/ListUser" component={ListUser} />
-            <Route path="/Outputs" component={Outputs} />
-            <Route path="/Outputs/:id" component={Outputs}/>
+            <Route exact path="/" component={Accepts} exact />
+            <Route exact path="/ListUser" component={ListUser} />
+            <Route exact path="/Outputs" component={Outputs} />
+            <Route exact path="/Outputs/:id" component={Outputs}/>
           </Switch>
         </div>
       </Router>
-    </div>
+    </div>  
   );
 }
 
